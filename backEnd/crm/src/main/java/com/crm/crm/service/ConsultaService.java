@@ -27,13 +27,13 @@ public class ConsultaService {
         return consultaRepository.save(consulta);
     }
 
-    public Long quantConsultasByUsuario(Long idUsuario){
-        return (long) consultaRepository.findByIdUsuario(idUsuario).size();
-    }
+    // public Long quantConsultasByUsuario(Long idUsuario){
+    //     return (long) consultaRepository.findByIdUsuario(idUsuario).size();
+    // }
 
-    public Long quantConsultasByMedico(Long idMedico){
-        return (long) consultaRepository.findByIdMedico(idMedico).size();
-    }
+    // public Long quantConsultasByMedico(Long idMedico){
+    //     return (long) consultaRepository.findByIdMedico(idMedico).size();
+    // }
 
     public Long consultasTotal(){
         return (long) consultaRepository.findAll().size();

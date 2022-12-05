@@ -35,15 +35,15 @@ public class ConsultaController {
         return consultaService.findConsultaById(id);
     }
 
-    @GetMapping("/quantidade/cliente/{id}")
-    public Long quantdConsultaByCliente(@PathVariable Long id){
-        return consultaService.quantConsultasByUsuario(id);
-    }
+    // @GetMapping("/quantidade/cliente/{id}")
+    // public Long quantdConsultaByCliente(@PathVariable Long id){
+    //     return consultaService.quantConsultasByUsuario(id);
+    // }
 
-    @GetMapping("/quantidade/medico/{id}")
-    public Long quantdConsultaBymedico(@PathVariable Long id){
-        return consultaService.quantConsultasByMedico(id);
-    }
+    // @GetMapping("/quantidade/medico/{id}")
+    // public Long quantdConsultaBymedico(@PathVariable Long id){
+    //     return consultaService.quantConsultasByMedico(id);
+    // }
 
     @GetMapping("/quantidade/total")
     public Long consultaTotal(){

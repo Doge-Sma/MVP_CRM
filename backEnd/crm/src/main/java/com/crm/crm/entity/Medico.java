@@ -7,44 +7,31 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table
 @Data
-public class Usuario {
-
+@NoArgsConstructor
+public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_Usuario")
+    @Column(name = "id_Medico")
     private Long id;
-    
+
     @Column
     private String name;
-    
-    @Column
-    private String email;
-    
-    @Column
-    private String senha;
-    
-    @Column
-    private String CPF;
-    
-    @Column
-    private String Telefone;
-    
-    @Column
-    private String cargo;
 
-    @OneToMany(mappedBy = "usuario")
-    private Collection<Consulta> consultas;
+    @Column
+    private String Cargo;
     
+    @Column
+    private String crm;
+
+    @ManyToMany(mappedBy = "medicoConsulta")
+    private Collection<Consulta> consultaMedico;
 }

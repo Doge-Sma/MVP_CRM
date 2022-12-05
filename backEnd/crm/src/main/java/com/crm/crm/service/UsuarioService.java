@@ -32,5 +32,7 @@ public class UsuarioService {
         new ResponseStatusException(HttpStatus.BAD_REQUEST,"Este usuario não existe"));
     }
 
+    
+
 
 }

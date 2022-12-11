@@ -10,15 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 @AllArgsConstructor
-@NoArgsConstructor
 @Table
 @Data
 @Entity
@@ -33,17 +31,20 @@ public class Orcamento {
     private Long valotTotal;
     
     @Column
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private LocalDate data;
+    private LocalDate dataCriado;
     
-    @Column
-    private String medico;
     
     @Column
     private String pagamento;
+
+    @ManyToOne()
+    @JoinColumn(name = "id_Usuario")
+    private Usuario usuarioOrcamento;
+
+    @OneToOne
+    @JoinColumn(name = "id_Medico")
+    private Medico medico;
     
-    @Column
-    private String observacao;
 
     @ManyToMany
     @JoinTable(name = "orcamento_Procedimento",
@@ -52,7 +53,9 @@ public class Orcamento {
     private Collection<Procedimento> orcamento_procedimentos;
 
 
-
+    public Orcamento(){
+        this.valotTotal = (long) 0;
+    }
 
 
     

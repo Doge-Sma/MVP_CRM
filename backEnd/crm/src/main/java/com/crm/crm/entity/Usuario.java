@@ -1,5 +1,6 @@
 package com.crm.crm.entity;
 
+import java.time.LocalDate;
 import java.util.Collection;
 
 import javax.persistence.Column;
@@ -37,12 +38,18 @@ public class Usuario {
     
     @Column
     private String CPF;
-    
+
     @Column
     private String Telefone;
     
     @Column
     private String cargo;
+
+    @Column
+    private LocalDate dataCriada;
+
+    @OneToMany(mappedBy = "usuarioOrcamento")
+    private Collection<Orcamento> orcamentos; 
 
     @OneToMany(mappedBy = "usuario")
     private Collection<Consulta> consultas;

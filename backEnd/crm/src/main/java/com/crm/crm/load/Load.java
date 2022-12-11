@@ -1,5 +1,7 @@
 package com.crm.crm.load;
 
+import java.time.LocalDate;
+
 import org.springframework.stereotype.Service;
 
 import com.crm.crm.entity.Consulta;
@@ -12,6 +14,7 @@ import com.crm.crm.repository.MedicoRepository;
 import com.crm.crm.repository.OrcamentoRepository;
 import com.crm.crm.repository.ProcedimentoRepository;
 import com.crm.crm.repository.UsuarioRepository;
+import com.crm.crm.service.OrcamentoService;
 
 import lombok.AllArgsConstructor;
 
@@ -24,6 +27,7 @@ public class Load {
     ConsultaRepository consultaRepository;
     OrcamentoRepository orcamentoRepository;
     ProcedimentoRepository procedimentoRepository;
+    OrcamentoService orcamentoService;
 
     public void carregarUsuarios(){
         Usuario usuario = new Usuario();
@@ -34,6 +38,7 @@ public class Load {
         usuario.setName("Nome");
         usuario.setSenha("123");
         usuario.setTelefone("(83) 9 1234-1234");
+        usuario.setDataCriada(LocalDate.now());
 
         usuarioRepository.save(usuario);
         
@@ -54,6 +59,7 @@ public class Load {
 
         consulta.setObservacao("teste");
         consulta.setStatus("Realizado");
+        consulta.setDataMarcada(LocalDate.of(2020, 1, 24));
 
         consultaRepository.save(consulta);
     }
@@ -73,20 +79,26 @@ public class Load {
     public void carregarOrcamento(){
         Orcamento orcamento = new Orcamento();
 
-        orcamento.setObservacao("teste");
+        //orcamento.setObservacao("teste");
         orcamento.setPagamento("Cartao");
-        orcamento.setValotTotal((long) 200);
-        orcamento.setMedico("teste");
-        
+        //orcamento.setMedico("teste");   
         orcamentoRepository.save(orcamento);
+    }
+
+    public void adicionarProcedimento(){
+        Long valor1 = (long) 1;
+        Long valor2 = (long) 1;
+        orcamentoService.adicionarProcedimento(valor1, valor2);
     }
 
 
     public void carregar(){
-        carregarConsulta();
-        carregarMedico();
-        carregarOrcamento();
-        carregarProcedimento();
         carregarUsuarios();
+        carregarMedico();
+        carregarProcedimento();
+        carregarOrcamento();
+        carregarConsulta();
+        adicionarProcedimento();
+      
     }
 }

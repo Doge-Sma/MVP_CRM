@@ -21,7 +21,7 @@ public class Medico {
     private Long id;
 
     @Column
-    private String name;
+    private String nome;
 
     @Column
     private String Cargo;

@@ -212,7 +212,7 @@ const renderOrcamentos = async () =>
       const elementIdMedico   = document.createElement("th");
       
       elementID.innerHTML         = element.id;
-      elementValorTotal.innerHTML = element.valorTotal;
+      elementValorTotal.innerHTML = element.valotTotal;
       elementData.innerHTML       = element.data;
       elementPagamento.innerHTML  = element.pagamento;
       elementIdUsuario.innerHTML  = element.idUsuario;

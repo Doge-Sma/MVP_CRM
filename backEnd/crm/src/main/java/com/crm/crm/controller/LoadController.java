@@ -11,7 +11,7 @@ import com.crm.crm.service.OrcamentoService;
 
 import lombok.AllArgsConstructor;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/load")
 @AllArgsConstructor

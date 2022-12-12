@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,29 @@
     <link rel="stylesheet" href="src/style.css">
     <script src="src/main.js"></script>
 </head>
+
 <body>
-    <h1>Dados vindos da API</h1>
-    <section>
-        <select name="consultas" id="consultas" onchange="getConsulta()">
-        <option value="">
-            Selecione uma consulta...
-        </option>
-        </select>
+    <header>
+        <div class="menu">
+            <h1 class="menu-h1">Clinica</h1>
+            <nav class="menu-bar">
+                <input class="menu-button" type="button" value="Home" onclick="renderHome()">
+                <input class="menu-button" type="button" value="Usuários" onclick="renderUsuarios()">
+                <input class="menu-button" type="button" value="Consultas" onclick="renderConsultas()">
+                <input class="menu-button" type="button" value="Medicos" onclick="renderMedicos()">
+                <input class="menu-button" type="button" value="Orcamentos" onclick="renderOrcamentos()">
+                <input class="menu-button" type="button" value="Procedimentos" onclick="renderProcedimentos()">
+            </nav>
+        </div>
+    </header>
+
+    <section class="conteudo">
+        <h1 class="conteudo-h1"></h1>
+        <div class="div-conteudo">
+            <!-- Elemento a ser renderizado-->
+
+        </div>
     </section>
 </body>
+
 </html>

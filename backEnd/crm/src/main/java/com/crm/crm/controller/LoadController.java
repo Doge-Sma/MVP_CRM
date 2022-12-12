@@ -50,11 +50,19 @@ public class LoadController {
     @GetMapping("/consultas/orcamento")
     public void carregarOrcamentoConsultaComOrcamento(){
         load.carregarConsultaComOrcamento();
+    
+    }
+
+    @GetMapping("/adicionar/procedimentos")
+    public void adicionarProcedimentos(){
+        load.adicionarProcedimento();
     }
 
     @GetMapping("/{id_Procedimento}/{id_Consulta}")
     public void adicionarProcedimento(@PathVariable Long id_Procedimento, @PathVariable Long id_Consulta ){
         orcamentoService.adicionarProcedimento(id_Procedimento, id_Consulta);
     }
+
+    
     
 }

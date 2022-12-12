@@ -33,6 +33,10 @@ public class Load {
         loadConsulta.carregarConsultaComOrcamento();
     }
 
+    public void adicionarProcedimento(){
+        loadConsulta.adicionarProcedimento();
+    }
+
 
     public void carregarDados(){
       loadMedico.carregarMedicos();

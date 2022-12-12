@@ -12,6 +12,7 @@ import com.crm.crm.entity.Consulta;
 import com.crm.crm.entity.Orcamento;
 import com.crm.crm.repository.ConsultaRepository;
 import com.crm.crm.repository.OrcamentoRepository;
+import com.crm.crm.service.GestorService;
 import com.crm.crm.service.OrcamentoService;
 
 import lombok.AllArgsConstructor;
@@ -24,6 +25,7 @@ public class LoadConsulta {
     ConsultaRepository consultaRepository;
     OrcamentoRepository orcamentoRepository;
     OrcamentoService orcamentoService;
+    GestorService gestorService;
 
 
     public void carregarOrcamentoCredito(){
@@ -37,8 +39,7 @@ public class LoadConsulta {
         Orcamento orcamento1 = convertOrcamentoEntity(orcamentoDTO1);
         orcamento1.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento1 = orcamentoRepository.save(orcamento1);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
+
 
         OrcamentoDTO orcamentoDTO2 = new OrcamentoDTO();
         orcamentoDTO2.setIdMedico((long) gerador.nextInt(9)+1);
@@ -48,8 +49,7 @@ public class LoadConsulta {
         Orcamento orcamento2 = convertOrcamentoEntity(orcamentoDTO2);
         orcamento2.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento2 = orcamentoRepository.save(orcamento2);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
+
 
         OrcamentoDTO orcamentoDTO3 = new OrcamentoDTO();
         orcamentoDTO3.setIdMedico((long) gerador.nextInt(9)+1);
@@ -59,8 +59,7 @@ public class LoadConsulta {
         Orcamento orcamento3 = convertOrcamentoEntity(orcamentoDTO3);
         orcamento3.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento3 = orcamentoRepository.save(orcamento3);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
+
 
         OrcamentoDTO orcamentoDTO4 = new OrcamentoDTO();
         orcamentoDTO4.setIdMedico((long) gerador.nextInt(9)+1);
@@ -70,8 +69,7 @@ public class LoadConsulta {
         Orcamento orcamento4 = convertOrcamentoEntity(orcamentoDTO4);
         orcamento4.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento4 = orcamentoRepository.save(orcamento4);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
+
 
         OrcamentoDTO orcamentoDTO5 = new OrcamentoDTO();
         orcamentoDTO5.setIdMedico((long) gerador.nextInt(9)+1);
@@ -81,8 +79,6 @@ public class LoadConsulta {
         Orcamento orcamento5 = convertOrcamentoEntity(orcamentoDTO5);
         orcamento5.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento5 = orcamentoRepository.save(orcamento5);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
 
         OrcamentoDTO orcamentoDTO6 = new OrcamentoDTO();
         orcamentoDTO6.setIdMedico((long) gerador.nextInt(9)+1);
@@ -92,8 +88,7 @@ public class LoadConsulta {
         Orcamento orcamento6 = convertOrcamentoEntity(orcamentoDTO6);
         orcamento6.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento6 = orcamentoRepository.save(orcamento6);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
+
 
         OrcamentoDTO orcamentoDTO7 = new OrcamentoDTO();
         orcamentoDTO7.setIdMedico((long) gerador.nextInt(9)+1);
@@ -103,8 +98,6 @@ public class LoadConsulta {
         Orcamento orcamento7 = convertOrcamentoEntity(orcamentoDTO7);
         orcamento7.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento7 = orcamentoRepository.save(orcamento7);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
 
         OrcamentoDTO orcamentoDTO8 = new OrcamentoDTO();
         orcamentoDTO8.setIdMedico((long) gerador.nextInt(9)+1);
@@ -114,8 +107,7 @@ public class LoadConsulta {
         Orcamento orcamento8 = convertOrcamentoEntity(orcamentoDTO8);
         orcamento8.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento8 = orcamentoRepository.save(orcamento8);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
+
 
     }
 
@@ -130,8 +122,6 @@ public class LoadConsulta {
         Orcamento orcamento1 = convertOrcamentoEntity(orcamentoDTO1);
         orcamento1.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento1 = orcamentoRepository.save(orcamento1);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
 
         OrcamentoDTO orcamentoDTO2 = new OrcamentoDTO();
         orcamentoDTO2.setIdMedico((long) gerador.nextInt(9)+1);
@@ -141,8 +131,6 @@ public class LoadConsulta {
         Orcamento orcamento2 = convertOrcamentoEntity(orcamentoDTO2);
         orcamento2.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento2 = orcamentoRepository.save(orcamento2);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
 
         OrcamentoDTO orcamentoDTO3 = new OrcamentoDTO();
         orcamentoDTO3.setIdMedico((long) gerador.nextInt(9)+1);
@@ -152,8 +140,6 @@ public class LoadConsulta {
         Orcamento orcamento3 = convertOrcamentoEntity(orcamentoDTO3);
         orcamento3.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento3 = orcamentoRepository.save(orcamento3);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
 
         OrcamentoDTO orcamentoDTO4 = new OrcamentoDTO();
         orcamentoDTO4.setIdMedico((long) gerador.nextInt(9)+1);
@@ -163,8 +149,7 @@ public class LoadConsulta {
         Orcamento orcamento4 = convertOrcamentoEntity(orcamentoDTO4);
         orcamento4.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento4 = orcamentoRepository.save(orcamento4);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
+
 
         OrcamentoDTO orcamentoDTO5 = new OrcamentoDTO();
         orcamentoDTO5.setIdMedico((long) gerador.nextInt(9)+1);
@@ -174,8 +159,7 @@ public class LoadConsulta {
         Orcamento orcamento5 = convertOrcamentoEntity(orcamentoDTO5);
         orcamento5.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento5 = orcamentoRepository.save(orcamento5);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
+
 
         OrcamentoDTO orcamentoDTO6 = new OrcamentoDTO();
         orcamentoDTO6.setIdMedico((long) gerador.nextInt(9)+1);
@@ -185,8 +169,6 @@ public class LoadConsulta {
         Orcamento orcamento6 = convertOrcamentoEntity(orcamentoDTO6);
         orcamento6.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento6 = orcamentoRepository.save(orcamento6);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
 
         OrcamentoDTO orcamentoDTO7 = new OrcamentoDTO();
         orcamentoDTO7.setIdMedico((long) gerador.nextInt(9)+1);
@@ -196,8 +178,6 @@ public class LoadConsulta {
         Orcamento orcamento7 = convertOrcamentoEntity(orcamentoDTO7);
         orcamento7.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento7 = orcamentoRepository.save(orcamento7);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
 
         OrcamentoDTO orcamentoDTO8 = new OrcamentoDTO();
         orcamentoDTO8.setIdMedico((long) gerador.nextInt(9)+1);
@@ -206,9 +186,7 @@ public class LoadConsulta {
         orcamentoDTO8.setStatus("Agendada");
         Orcamento orcamento8 = convertOrcamentoEntity(orcamentoDTO8);
         orcamento8.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
-        orcamento8 = orcamentoRepository.save(orcamento8);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
+    orcamentoRepository.save(orcamento8);
 
     }
 
@@ -223,8 +201,6 @@ public class LoadConsulta {
         Orcamento orcamento1 = convertOrcamentoEntity(orcamentoDTO1);
         orcamento1.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento1 = orcamentoRepository.save(orcamento1);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento1.getId());
 
         OrcamentoDTO orcamentoDTO2 = new OrcamentoDTO();
         orcamentoDTO2.setIdMedico((long) gerador.nextInt(9)+1);
@@ -234,8 +210,6 @@ public class LoadConsulta {
         Orcamento orcamento2 = convertOrcamentoEntity(orcamentoDTO2);
         orcamento2.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento2 = orcamentoRepository.save(orcamento2);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento2.getId());
 
         OrcamentoDTO orcamentoDTO3 = new OrcamentoDTO();
         orcamentoDTO3.setIdMedico((long) gerador.nextInt(9)+1);
@@ -245,8 +219,6 @@ public class LoadConsulta {
         Orcamento orcamento3 = convertOrcamentoEntity(orcamentoDTO3);
         orcamento3.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento3 = orcamentoRepository.save(orcamento3);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento3.getId());
 
         OrcamentoDTO orcamentoDTO4 = new OrcamentoDTO();
         orcamentoDTO4.setIdMedico((long) gerador.nextInt(9)+1);
@@ -256,8 +228,6 @@ public class LoadConsulta {
         Orcamento orcamento4 = convertOrcamentoEntity(orcamentoDTO4);
         orcamento4.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento4 = orcamentoRepository.save(orcamento4);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento4.getId());
 
         OrcamentoDTO orcamentoDTO5 = new OrcamentoDTO();
         orcamentoDTO5.setIdMedico((long) gerador.nextInt(9)+1);
@@ -267,8 +237,6 @@ public class LoadConsulta {
         Orcamento orcamento5 = convertOrcamentoEntity(orcamentoDTO5);
         orcamento5.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento5 = orcamentoRepository.save(orcamento5);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento5.getId());
 
         OrcamentoDTO orcamentoDTO6 = new OrcamentoDTO();
         orcamentoDTO6.setIdMedico((long) gerador.nextInt(9)+1);
@@ -278,8 +246,6 @@ public class LoadConsulta {
         Orcamento orcamento6 = convertOrcamentoEntity(orcamentoDTO6);
         orcamento6.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento6 = orcamentoRepository.save(orcamento6);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento6.getId());
 
         OrcamentoDTO orcamentoDTO7 = new OrcamentoDTO();
         orcamentoDTO7.setIdMedico((long) gerador.nextInt(9)+1);
@@ -289,8 +255,6 @@ public class LoadConsulta {
         Orcamento orcamento7 = convertOrcamentoEntity(orcamentoDTO7);
         orcamento7.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento7 = orcamentoRepository.save(orcamento7);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento7.getId());
 
         OrcamentoDTO orcamentoDTO8 = new OrcamentoDTO();
         orcamentoDTO8.setIdMedico((long) gerador.nextInt(9)+1);
@@ -300,8 +264,7 @@ public class LoadConsulta {
         Orcamento orcamento8 = convertOrcamentoEntity(orcamentoDTO8);
         orcamento8.setDataCriado(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         orcamento8 = orcamentoRepository.save(orcamento8);
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
-        orcamentoService.adicionarProcedimento((long) gerador.nextInt(9)+1, orcamento8.getId());
+
     }
 
     public void carregarConsultaSemOrcamento(){
@@ -343,7 +306,7 @@ public class LoadConsulta {
         consultaDTO1.setIdUsuario((long) gerador.nextInt(10)+1);
         consultaDTO1.setObservacao("Nenhuma");
         consultaDTO1.setStatus("Agendada");
-        consultaDTO1.setIdOrcamento((long) gerador.nextInt(20)+1);
+        consultaDTO1.setIdOrcamento((long) gerador.nextInt(5)+1);
         Consulta consulta1 = convertEntity(consultaDTO1);
         consulta1.setDataCriada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         consulta1.setDataMarcada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
@@ -353,22 +316,35 @@ public class LoadConsulta {
         consultaDTO2.setIdUsuario((long) gerador.nextInt(10)+1);
         consultaDTO2.setObservacao("Nenhuma");
         consultaDTO2.setStatus("Realizada");
-        consultaDTO2.setIdOrcamento((long) gerador.nextInt(20)+1);
+        consultaDTO2.setIdOrcamento((long) gerador.nextInt(5)+1);
         Consulta consulta2 = convertEntity(consultaDTO2);
         consulta2.setDataCriada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         consulta2.setDataMarcada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         consultaRepository.save(consulta2);
         
         ConsultaDTO consultaDTO3 = new ConsultaDTO();
-        consultaDTO3.setIdUsuario((long) gerador.nextInt(10)+1);
+        consultaDTO3.setIdUsuario((long) gerador.nextInt(5)+1);
         consultaDTO3.setObservacao("Nenhuma");
         consultaDTO3.setStatus("Cancelada");
-        consultaDTO3.setIdOrcamento((long) gerador.nextInt(20)+1);
+        consultaDTO3.setIdOrcamento((long) gerador.nextInt(10)+1);
         Consulta consulta3 = convertEntity(consultaDTO3);
         consulta3.setDataCriada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         consulta3.setDataMarcada(LocalDate.of(2021, gerador.nextInt(12)+1, gerador.nextInt(27)+1));
         consultaRepository.save(consulta3);
 
+    }
+
+
+    public void adicionarProcedimento(){
+        Random gerador = new Random();
+        int tamanhoOrcamento = orcamentoService.findAllOrcamento().size();
+        int tamanhoProcedimento = gestorService.findAllProcedimento().size();
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
+        orcamentoService.adicionarProcedimento((long) gerador.nextInt(tamanhoProcedimento)+1, (long) gerador.nextInt(tamanhoOrcamento)+1);
     }
 
     public Consulta convertEntity(ConsultaDTO consultaDTO){

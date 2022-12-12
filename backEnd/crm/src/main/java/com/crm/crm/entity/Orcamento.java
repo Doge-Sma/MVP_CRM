@@ -37,6 +37,8 @@ public class Orcamento {
     @Column
     private String pagamento;
 
+    @Column String status;
+
     @ManyToOne()
     @JoinColumn(name = "id_Usuario")
     private Usuario usuarioOrcamento;

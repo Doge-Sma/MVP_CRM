@@ -19,9 +19,37 @@ public class LoadController {
     Load load;
     OrcamentoService orcamentoService;
 
-    @GetMapping
+    @GetMapping("/dados")
     public void carregar(){
-        load.carregar();
+        load.carregarDados();
+    }
+
+    @GetMapping("/orcamento/debito")
+    public void carregarOrcamentoDebito(){
+        load.carregarOrcamentoDebito();
+    }
+
+    
+    @GetMapping("/orcamento/credito")
+    public void carregarOrcamentoCredito(){
+        load.carregarOrcamentoCredito();
+    }
+
+    
+    @GetMapping("/orcamento/dinheiro")
+    public void carregarOrcamentoDinheiro(){
+        load.carregarOrcamentoDinheiro();
+    }
+
+    @GetMapping("/consultas")
+    public void carregarOrcamentoConsultaSemOrcamento(){
+        load.carregarConsultasSemOrcamento();
+    }
+
+    
+    @GetMapping("/consultas/orcamento")
+    public void carregarOrcamentoConsultaComOrcamento(){
+        load.carregarConsultaComOrcamento();
     }
 
     @GetMapping("/{id_Procedimento}/{id_Consulta}")

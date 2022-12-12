@@ -12,6 +12,7 @@ public class OrcamentoDTO {
     private Long valorTotal;
     private String data;
     private String pagamento;
+    private String status;
     private Long idUsuario;
     private Long idMedico;
 

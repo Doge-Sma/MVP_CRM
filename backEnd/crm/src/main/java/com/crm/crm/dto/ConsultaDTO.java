@@ -13,6 +13,7 @@ public class ConsultaDTO {
     private String dataMarcada;
     private String dataCriada;
     private String status;
+    private Long idUsuario;
     private Long idOrcamento;
 
     
